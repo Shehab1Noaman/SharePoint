@@ -262,8 +262,8 @@ Function Show-MigrationConfigUI {
     $buttonOK.Add_Click({
         # Capture all user inputs into global variables
         $global:g_tenantId = $textBoxTenantID.Text
-        $global:g_applicationId = $textBoxApplicationID.Text # Changed: Application ID
-        $global:g_clientSecret = $textBoxClientSecret.Text # Changed: Direct secret value
+        $global:g_applicationId = $textBoxApplicationID.Text 
+        $global:g_clientSecret = $textBoxClientSecret.Text 
         $global:g_sourceSiteSpecifier = $textBoxSourceSiteSpecifier.Text
         $global:g_destSiteSpecifier = $textBoxDestSiteSpecifier.Text
         $global:g_sourceFolderPath = $textBoxSourceFolderPath.Text
@@ -389,7 +389,7 @@ Function Write-CopyRecord {
     }
 }
 
-# Initializes log directories and loads processed paths if resuming
+# Initialises log directories and loads processed paths if resuming
 Function Initialize-LogAndResume {
     # Create base log directory if it doesn't exist
     if (-not (Test-Path $global:g_logBaseDirPath)) {
@@ -622,7 +622,7 @@ Function Convert-SharePointPathToRelative {
     Param (
         [string]$Path
     )
-    $normalizedPath = $Path.Trim().TrimStart('/').Replace('\', '/') # Normalize slashes and trim leading/trailing
+    $normalizedPath = $Path.Trim().TrimStart('/').Replace('\', '/') # Normalise slashes and trim leading/trailing
     # If the path starts with "documents/" (case-insensitive), remove it for Graph API's 'root:/' path
     if ($normalizedPath.StartsWith("documents/", [System.StringComparison]::OrdinalIgnoreCase)) {
         return $normalizedPath.Substring("documents/".Length)
@@ -1026,7 +1026,7 @@ Function Copy-SharePointItem {
 
                         If ($fileStatus -eq "completed") {
                             Write-Log -Message "File '$itemName' copied successfully. Validating hash..." -Level "INFO"
-                            # --- Hash Validation after successful copy ---
+                            # ----- Hash Validation after successful copy -----
                             $hashMatchStatus = "N/A"
                             $finalDestSha1Hash = $null
                             Try {
