@@ -67,8 +67,8 @@ $global:g_progressBar = $null
 Function Show-MigrationConfigUI {
     Param (
         # Default placeholder values for the UI fields
-        [string]$DefaultTenantId = "YOUR_AZURE_AD_TENANT_ID_HERE", # Example: "abcdef12-3456-7890-abcd-ef1234567890"
-        [string]$DefaultApplicationId = "YOUR_AZURE_AD_APP_APPLICATION_ID_HERE", # Example: "09876543-2109-8765-4321-098765432109" (changed from ClientId)
+        [string]$DefaultTenantId = "YOUR_AZURE_AD_TENANT_ID_HERE", # 
+        [string]$DefaultApplicationId = "YOUR_AZURE_AD_APP_APPLICATION_ID_HERE", 
         [string]$DefaultClientSecret = "YOUR_CLIENT_SECRET_VALUE_HERE", # Direct secret value
         [string]$DefaultSourceSiteSpecifier = "yourdomain.sharepoint.com:/sites/SourceSiteCollection", # Example
         [string]$DefaultDestSiteSpecifier = "yourdomain.sharepoint.com:/sites/DestinationSiteCollection", # Example
