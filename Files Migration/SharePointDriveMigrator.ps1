@@ -8,8 +8,8 @@ Add-Type -AssemblyName System.Drawing
 # region --- Global Variables for Script State (Accessible throughout) ---
 # These variables store configuration and runtime state.
 $global:g_tenantId = ""
-$global:g_applicationId = "" # Will now be referred to as Application ID
-$global:g_clientSecret = "" # Will now store the secret value directly from UI
+$global:g_applicationId = "" 
+$global:g_clientSecret = "" 
 
 $global:g_sourceSiteSpecifier = ""
 $global:g_destSiteSpecifier = ""
